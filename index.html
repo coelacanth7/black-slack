@@ -2,14 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Black Slack</title>
+    <title>black slack</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
-    <h1>Black Slack</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="center">
+      <h1>black slack 🦄</h1>
+
+      <p>so you should only have to use this once and then you can close it until
+        you update Slack...</p>
+    </div>
+
+
+    <!--
+    I want to include the option to change different colors
 
     <select id="css-file-select" class="" name="">
       <option value="black">black</option>
@@ -17,11 +24,12 @@
       <option value="gray">gray</option>
     </select>
 
-    <button type="button" name="inject" id="inject">inject</button>
+    -->
+    <div class="center">
+      <button href="something" class="btn" name="inject" id="inject">install</button>
+    </div>
 
-    <ul id="logs">
-      <li>logs</li>
-    </ul>
+    <ul id="logs"></ul>
 
     <script>
       require('./js/injector.js')

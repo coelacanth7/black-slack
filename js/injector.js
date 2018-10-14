@@ -4,30 +4,33 @@ const logger = require("./logger");
 const constants = require("./constants");
 
 // listeners
-constants.cssSelecet.addEventListener("change", e =>
-	logger.log(e.target.value)
-);
+// constants.cssSelect.addEventListener("change", e =>
+// 	logger.log(e.target.value)
+// );
 constants.injectButton.addEventListener("click", handleFlow);
 
 // handle the flow
 function handleFlow() {
-	logger.log("inject");
+	logger.log("working now...");
 
-	if (!checkIfJsHasInjected()) {
+	if (!ifJsHasInjected()) {
+    logger.log("Injecting the JS for you")
 		thenInjectJS();
 	}
 
-	if (!checkIfCssHasInjected()) {
+	if (!ifCssHasInjected()) {
+    logger.log("Injecting the CSS for you")
 		thenInjectCSS();
 	}
 
-	if (checkIfJsHasInjected() && checkIfCssHasInjected()) {
+	if (ifJsHasInjected() && ifCssHasInjected()) {
 		logger.log("you got both now");
 		logger.log("you should be good to go :)");
+		logger.log("Refresh Slack. CMD + R");
 	}
 }
 
-function checkIfJsHasInjected() {
+function ifJsHasInjected() {
 	let ssbInteropBuffer;
 	let injectedJSFileBuffer;
 	let includesTheJS;
@@ -50,7 +53,7 @@ function checkIfJsHasInjected() {
 	}
 }
 
-function checkIfCssHasInjected() {
+function ifCssHasInjected() {
 	let cssExists;
 
 	// try

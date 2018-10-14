@@ -1,0 +1,53 @@
+body {
+	font-family: "Roboto", sans-serif;
+	color: #dbd8d6;
+	background-color: #323232;
+}
+
+button {
+	width: 80%;
+  max-width: 600px;
+	background-color: #dbd8d6;
+}
+
+.center {
+	text-align: center;
+}
+
+ul {
+  list-style: none;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 0;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    background-color: #9555AF;
+    color: #dbd8d6;
+    font-size: 14px;
+
+}
+
+.btn:hover {
+    color: #9050AA;
+    border-color: currentColor;
+    background-color: white;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}

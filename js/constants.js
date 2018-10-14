@@ -21,7 +21,7 @@ constants.injectedCssFile = fs.readFileSync(
 );
 
 // document elements
-constants.cssSelecet = document.getElementById("css-file-select");
+constants.cssSelect = document.getElementById("css-file-select");
 constants.injectButton = document.getElementById("inject");
 
 module.exports = constants;
