@@ -17,13 +17,10 @@
       <option value="gray">gray</option>
     </select>
 
+    <button type="button" name="inject" id="inject">inject</button>
+
     <script>
-      // You can also require other files to run in this process
       require('./renderer.js')
-
-      const cssSelecet = document.getElementById('css-file-select')
-      cssSelecet.addEventListener('change', e => console.log(e.target.value))
-
     </script>
   </body>
 </html>

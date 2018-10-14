@@ -4,17 +4,14 @@
 
 // The css file to apply
 const cssFile = "black";
+const url = `/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/${cssFile}.css`;
 
 document.addEventListener("DOMContentLoaded", function() {
 	const fs = require("fs");
-	fs.readFile(
-		`/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/${cssFile}.css`,
-		"utf8",
-		(err, css) => {
-			if (err) throw err;
-			$("<style></style>")
-				.appendTo("head")
-				.html(css);
-		}
-	);
+	fs.readFile(url, "utf8", (err, css) => {
+		if (err) throw err;
+		$("<style></style>")
+			.appendTo("head")
+			.html(css);
+	});
 });
