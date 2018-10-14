@@ -3,14 +3,18 @@
 // This is the JS file to inject into the Slack Applications folder
 
 // The css file to apply
-const cssFile = "black"
+const cssFile = "black";
 
 document.addEventListener("DOMContentLoaded", function() {
-  const fs = require("fs");
-  fs.readFile(`/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/${cssFile}.css`, "utf8", (err, css) => {
-    if (err) throw err;
-    $("<style></style>")
-      .appendTo("head")
-      .html(css);
-  });
+	const fs = require("fs");
+	fs.readFile(
+		`/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/${cssFile}.css`,
+		"utf8",
+		(err, css) => {
+			if (err) throw err;
+			$("<style></style>")
+				.appendTo("head")
+				.html(css);
+		}
+	);
 });
