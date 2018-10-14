@@ -2,18 +2,28 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Black Slack</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Black Slack</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
 
+    <select id="css-file-select" class="" name="">
+      <option value="black">black</option>
+      <option value="blue">blue</option>
+      <option value="gray">gray</option>
+    </select>
+
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+
+      const cssSelecet = document.getElementById('css-file-select')
+      cssSelecet.addEventListener('change', e => console.log(e.target.value))
+
     </script>
   </body>
 </html>
